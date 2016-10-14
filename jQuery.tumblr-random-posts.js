@@ -21,7 +21,7 @@
       return this.each(function() {
         var self;
         self = this;
-        $.ajax("http://api.tumblr.com/v2/blog/" + settings.blogName + "/posts?api_key=" + settings.appKey, {
+        $.ajax("https://api.tumblr.com/v2/blog/" + settings.blogName + "/posts?api_key=" + settings.appKey, {
           type: 'GET',
           dataType: 'jsonp',
           data: {
@@ -32,7 +32,7 @@
             var random_number;
             console.log(data);
             random_number = Math.floor(Math.random() * data.response.total_posts);
-            return $.ajax("http://api.tumblr.com/v2/blog/" + settings.blogName + "/posts?api_key=" + settings.appKey, {
+            return $.ajax("https://api.tumblr.com/v2/blog/" + settings.blogName + "/posts?api_key=" + settings.appKey, {
               type: 'GET',
               dataType: 'jsonp',
               data: {
